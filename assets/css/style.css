@@ -1,10 +1,299 @@
-*{
+* {
     box-sizing: border-box;
 }
-html{
+
+html {
     font-size: 62.5%;
 }
-body{
+
+body {
     font-size: 1.6rem;
     font-family: "san" sans-serif;
+}
+
+:root {
+    --header-bg: #10375C;
+}
+
+/* =============comon========== */
+.container {
+    width: 1170px;
+    max-width: calc(100% - 50px);
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+.btn {
+    display: inline-block;
+    min-width: 205px;
+    line-height: 60px;
+    background: #2E80CE;
+    color: #FFF;
+    font-family: Sora;
+    font-size: 1.8rem;
+    font-weight: 400;
+    border-radius: 999px;
+    text-align: center;
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
+
+.section-heading {
+    color: #10375C;
+    font-family: Sora;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: -1px;
+}
+
+.section-desc {
+    color: #575F66;
+    font-family: Sora;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 1.66;
+}
+
+/* =================header=============== */
+.header {
+    background: var(--header-bg);
+    min-height: 100vh;
+}
+
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 30px;
+}
+
+.navbar__list {
+    display: flex;
+}
+
+.header__action--login,
+.navbar__link {
+    padding: 8px 21px;
+    color: #C9D2DA;
+    text-align: center;
+    font-family: Sora;
+    font-size: 1.6rem;
+    font-weight: 300;
+    line-height: 1.75;
+}
+
+.navbar__link--active {
+    text-shadow: 1px 0 0 currentColor;
+    /* font-weight: 400; */
+    color: #fff;
+}
+
+.navbar__link:hover,
+.navbar__link--active {
+    text-shadow: 1px 0 0 currentColor;
+    color: #fff;
+}
+
+.navbar__link--active::before {
+    position: relative;
+    right: 8px;
+    top: -1px;
+    content: "";
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #fff;
+}
+
+.header__action--signup {
+    min-width: 144px;
+    line-height: 44px;
+    font-size: 1.6rem;
+    text-align: center;
+}
+
+.header__action--login {
+    margin-right: 7px;
+}
+
+/* ==============hero============== */
+.hero {
+    display: flex;
+    align-items: center;
+    padding-top: 76px;
+}
+
+.hero__content {
+    width: 44%;
+    margin-right: 113px;
+}
+
+.hero__media {
+    flex: 1;
+}
+
+.hero__img-large {
+    width: 330px;
+    height: 540px;
+    border-radius: 6px;
+    background: url(<path-to-image>) lightgray 50% / cover no-repeat;
+    margin-right: -6px;
+    z-index: 1;
+}
+
+.hero__img-small {
+    width: 210px;
+    height: 410px;
+    border-radius: 0 6px 6px 0;
+    background: url(<path-to-image>) lightgray 50% / cover no-repeat;
+}
+
+.hero__images {
+    display: flex;
+    object-fit: cover;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.hero__heading {
+    color: #FFF;
+    font-family: Sora;
+    font-size: 70px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1.14;
+    letter-spacing: -1.4px;
+}
+
+.hero__desc {
+    margin-top: 22px;
+    color: #C9D2DA;
+    font-family: Sora;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 1.16;
+}
+
+.hero__row {
+    margin-top: 38px;
+    gap: 38px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.hero__phone {
+    color: #FFF;
+    text-align: center;
+    font-family: Sora;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.67;
+}
+
+/* ================main===================================== */
+
+
+/* ================service========= */
+.service {
+    padding: 170px 0;
+}
+
+.service__heading,
+.service__desc {
+    text-align: center;
+}
+
+.service__desc {
+    width: 480px;
+    margin: 0 auto;
+}
+
+.service__row {
+    margin-top: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.service__img {
+    width: 570px;
+    height: 570px;
+    border-radius: 12px;
+    background: url(<path-to-image>) lightgray 0px -1.3px / 100% 149.93% no-repeat;
+    object-fit: cover;
+    margin-right: 130px;
+}
+
+.service-item {
+    display: flex;
+    width: 470px;
+    border-radius: 10px;
+    background: #FFF;
+    padding: 21px;
+    transition: 0.25s;
+
+}
+
+.service-item:hover {
+    position: relative;
+    border-radius: 10px;
+    background: #FFF;
+    box-shadow: 0 14px 28px 0 rgba(0, 0, 0, 0.05);
+}
+
+.service-item__icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+    background: #EFF6FD;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.05);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    margin-right: 19px;
+    /* do nhanh cham khi vao */
+    transition: 0.25s;
+}
+
+.service-item__icon:hover {
+    color: #fff;
+    background: #2e80ce;
+
+
+}
+
+.service-item__heading {
+    color: #10375C;
+    font-family: Sora;
+    font-size: 1.8rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.service-item__desc {
+    margin-top: 8px;
+    color: #575F66;
+    font-family: Sora;
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 1.75;
+    
+}
+.service__btn{
+    margin-top: 55px;
 }
